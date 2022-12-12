@@ -12,7 +12,7 @@ html,body {
 .Overall {
     background-image: url('../assets/Images/toby-osborn-uURfDZ-ZYbk-unsplash.jpg');
     background-repeat: repeat;
-    background-position: center;
+    background-position: top;
     background-size: contain;
 
 }
