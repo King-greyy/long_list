@@ -13,14 +13,14 @@ html,body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
     justify-content: center;
     background-image: linear-gradient(45deg,rgb(4, 128, 0), blue, rgb(4, 128, 0));
 
 }
 
+
 .Div1 {
-    background-image: linear-gradient(45deg,rgb(4, 128, 0), blue, rgb(4, 128, 0));
+    background-image: linear-gradient(45deg,rgb(4, 128, 0), blue, rgb(4, 128, 0), blue,  rgb(4, 128, 0), blue);
     display: flex;
     flex-wrap: wrap;
     flex-flow: column wrap;
@@ -35,6 +35,8 @@ html,body {
     line-height: 2.0;
     animation: example 3s linear 0s 1 forwards;
     animation-fill-mode: none;
+    border-radius: 40px;
+    box-shadow: 10px 10px 20px aqua;
 }
 @keyframes example {
     from {bottom: 20px;opacity: 0.1;}
@@ -42,19 +44,36 @@ html,body {
   }
 .Div1 h1 {
     text-align: center;
-    font-size: 90px;
+    font-size: 150px;
 }
 .Div1 p {
-    font-size: xx-large;
+    font-size: 90px;
     text-align: center;
 }
+.Div1 form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+}
 .Div1 form>input {
-    width: 90%;
+    width: 70%;
     height: 100%;
     padding: 4%;
     border: 2px solid green;
     color: black;
     border-radius: 10%;
+}
+.Logos {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: space-between;
+    margin: 5%;
+    margin-bottom: 10%;
 }
 
 .Div2 {
