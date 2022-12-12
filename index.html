@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
+    <style>
+        #parent {
+            background-color: yellowgreen;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            height: auto;
+
+        }
+    </style>
+    <script></script>
+
+
+    <body>
+
+    <div class="overallContainer">
+        <div class="calcbody">
+            <input type="text" class="calcscreen"></input>
+            <div class="calcbtns">
+                <button value="1" onclick="" >1</button>
+                <button value="2" onclick="">2</button>
+                <button value="3" onclick="">3</button>
+                <button value="" id="equalsto" onclick="">=</button>
+                <button value="4" onclick="">4</button>
+                <button value="5" onclick="">5</button>
+                <button value="6" onclick="">6</button>
+                <button value="" onclick="">&#247</button>
+                <button value="7" onclick="">7</button>
+                <button value="8" onclick="">8</button>
+                <button value="9" onclick="">9</button>
+                <button value="" onclick="">&#43</button>
+                <button value="" onclick="">x</button>
+                <button value="" onclick="">e</button>
+                <button value="" id="point" onclick="">.</button>
+                <button value="" onclick="">&#45</button>
+                <button value="" onclick="" id="clear">AC</button>
+                <button value="" onclick="" id="onoff">ON/<br>OFF</button>
+            </div>
+        </div>
+    </div>
+<!-- <p id="points"></p>
+    <script>
+        let header="Template Literals"
+let tags=["template literals","javascript","es6"];
+
+let html = `<h2>${header}</h2><ol>`;
+
+for (const x of tags) {
+    html += `<li>${x}</li>`;
+}
+html += `</ol>`;
+document.getElementById('points').innerHTML = html
+    </script>
+
+    <h1 id="gome">Good evening </h1>
+
+    <script>
+        alert( new Date().getHours())
+        if (new Date().getHours() > 18) {
+            document.getElementById('gome').innerHTML = "Good Day!";
+        }
+        else {
+            if (new Date().getHours() > 10) {
+            document.getElementById('gome').innerHTML = "It's greater than 10!";
+            }
+            else {
+            document.getElementById('gome').innerHTML = "It's less than 10!";
+            } 
+        }
+    </script> -->
+<script>
+
+//     const request = new XMLHttpRequest();
+//     const url = 'https://jsonplaceholder.typicode.com/todos';
+//     request.open('GET',url);
+//     request.send();
+//     request.onreadystatechange = () =>{
+//          const todo= request.responseText;
+//          const parsedTodo = JSON.parse(todo);
+//          let divBox = '';
+//          parsedTodo.map((element) => 
+//          (
+//          divBox += ` <div class="card" style="width: 33%;margin:10px 0px 10px 0px; height:auto;">
+//     <img src="./assets/Favicons/info.ico" class="card-img-top" alt="...">
+//     <div class="card-body">
+//       <h5 class="card-title">Card title</h5>
+//       <p class="card-text">${element.title}</p>
+//       <a href="#" class="btn btn-primary">${element.completed}</a>
+//     </div>
+//   </div>` 
+//          ));
+// document.getElementById("parent").innerHTML = divBox;
+         
+        
+
+//     } 
+
+ async function getUrl (){
+    const request = new XMLHttpRequest();
+    const url =  'https://jsonplaceholder.typicode.com/todos';
+     request.open('GET',url);
+    await request.send();
+    request.onreadystatechange = async ()=>{ 
+         const todo= await request.responseText;
+         const parsedTodo = await JSON.parse(todo);
+         let divBox = '';
+         parsedTodo.map((element) => 
+         (
+         divBox += ` <div class="card" style="width: 33%;margin:10px 0px 10px 0px; height:auto;">
+    <img src="./assets/Favicons/info.ico" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">${element.title}</p>
+      <a href="#" class="btn btn-primary">${element.completed}</a>
+    </div>
+  </div>`      
+    ));
+document.getElementById("parent").innerHTML = divBox;
+console.log(divBox)
+}
+ }
+getUrl();  
+
+</script>
+<div id="response">
+    
+</div>
+<div id="parent">
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

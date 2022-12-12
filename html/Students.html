@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="../css/Students.css">
+</head>
+<body>
+    
+<div class="Overall">
+    <div id="div2">
+
+    </div>
+   <script>
+    const req = new XMLHttpRequest();
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    req.open('GET',url);
+    req.send();
+    req.onreadystatechange = () =>{
+         const album= req.responseText;
+         const parsedAlbum = JSON.parse(album);
+         let divBox = '';
+         parsedAlbum.map((element) => 
+         (
+         divBox +=     
+         `<ol class="list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold" ><img src="../assets/Images/portrait-of-confident-female-pharmacist-2021-08-30-02-27-46-utc-removebg-preview (2).png" alt="Student images" ></div>
+        <p><strong>FullName: </strong>${element.name}<p>
+        <p><strong>ID Number: </strong>${element.id}<p>
+        <p><strong>E-mail: </strong>${element.email}<p>
+        <p><strong>Phone: </strong>${element.phone}<p>
+        <p><strong>Address: </strong>${element.address.street} Street, ${element.address.suite} Suite, ${element.address.city} City. <p>
+        <p><strong>Company Name: </strong>${element.company.name}<p>
+        <p><strong>Website: </strong>${element.website}<p>
+
+    </div>
+  </li><br><hr>
+</ol>
+`
+
+         ));
+            document.getElementById("div2").innerHTML = "<h1>Students and their business ventures:</h1>" + divBox;
+         
+    } 
+
+   </script>
+</div>
+    
+</body>
+</html>

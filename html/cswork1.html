@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let a = [30,34,50,45,80,4,67]
+    let mIndex = Math.round((a.length)/2)
+    let mNumber = a[mIndex-1]
+
+    if (mNumber % 2 == 0 ) {
+        alert("The middle number is an even number!")
+    }
+    else {
+        alert("The middle number (" + mNumber +") is an odd number!")
+    }
+   </script> 
+
+   
+   <script>
+    async function getFile() {
+        let myPromise = new Promise(function (resolve) {
+            let req = new XMLHttpRequest();
+            const hold = req.get('')
+
+            req.send();
+        });
+        console.log(hold)
+    }
+   </script>
+</body>
+</html>

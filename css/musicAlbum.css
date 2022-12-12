@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100vh;
+}
+
+.screenall {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    background-image: linear-gradient(45deg,rgb(4, 128, 0), blue, rgb(4, 128, 0));
+
+}
+
+.Div1 {
+    background-image: linear-gradient(45deg,rgb(4, 128, 0), blue, rgb(4, 128, 0));
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    background-color: transparent;
+    height: 950px;
+    width: 70%;
+    color: antiquewhite;
+    line-height: 2.0;
+    animation: example 3s linear 0s 1 forwards;
+    animation-fill-mode: none;
+}
+@keyframes example {
+    from {bottom: 20px;opacity: 0.1;}
+    to {bottom: 0px;opacity: 1.0;}
+  }
+.Div1 h1 {
+    text-align: center;
+    font-size: 90px;
+}
+.Div1 p {
+    font-size: xx-large;
+    text-align: center;
+}
+.Div1 form>input {
+    width: 90%;
+    height: 100%;
+    padding: 4%;
+    border: 2px solid green;
+    color: black;
+    border-radius: 10%;
+}
+
+.Div2 {
+    background-image: linear-gradient(45deg,rgb(4, 128, 0), blue, rgb(4, 128, 0));
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+
+}
+
+.Album {
+    background-image: linear-gradient(45deg,rgb(4, 128, 0), blue, rgb(4, 128, 0));
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    padding: 3%;
+}
+.Album #words>a {
+    text-decoration: none;
+}
+.Album #images {
+    justify-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+}
+.Album img {
+    width: 40%;
+    height: 40%;
+}
+
+.Album #words {
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    background-color: transparent;
+    margin-right: 10%;
+}
+
+
+.Album #words>a {
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    width: 60%;
+    height: 40%;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    color: antiquewhite;
+}
+.Album #words a>h1 {
+    font-size: 50px;
+}
+.Album #words a>p {
+    font-size: xx-large;
+}
+
+
